@@ -5,7 +5,7 @@ const contentInput = document.getElementById("content");
 
 const API_URL = "http://localhost:8000/notes";
 
-// Fetch and display all notes
+
 function fetchNotes() {
   fetch(API_URL)
     .then(res => res.json())
@@ -23,7 +23,7 @@ function fetchNotes() {
     .catch(err => console.error(err));
 }
 
-// Add a new note
+
 addNoteBtn.addEventListener("click", () => {
   const title = titleInput.value.trim();
   const content = contentInput.value.trim();
@@ -47,7 +47,7 @@ addNoteBtn.addEventListener("click", () => {
     .catch(err => console.error(err));
 });
 
-// Delete a note
+
 function deleteNote(id) {
   fetch(`${API_URL}/${id}`, {
     method: "DELETE"
@@ -57,5 +57,5 @@ function deleteNote(id) {
     .catch(err => console.error(err));
 }
 
-// Initial load
+
 fetchNotes();

@@ -1,7 +1,7 @@
-/* Body & overall layout */
+
 body {
   font-family: Arial, sans-serif;
-  background: #020617; /* Dark background */
+  background: #020617; 
   display: flex;
   justify-content: center;
   padding: 50px;
@@ -10,33 +10,33 @@ body {
   overflow: hidden;
 }
 
-/* Radial Glow Background */
+
 body::before {
   content: "";
   position: absolute;
-  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  inset: 0; 
   background-image: radial-gradient(circle 500px at 50% 200px, #3e3e3e, transparent);
   z-index: 0;
 }
 
-/* Container (notes app box) */
+
 .container {
-  /* background removed to let radial glow show through */
+ 
   padding: 20px;
   border-radius: 8px;
   width: 400px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  position: relative; /* Ensure it sits above background */
+  position: relative;
   z-index: 1;
-  color: white; /* change text to white for readability */
+  color: white;
 }
 
-/* Inputs */
+
 input {
   width: 100%;
   padding: 8px;
   margin: 5px 0;
-  background: rgba(255, 255, 255, 0.1); /* slightly transparent input */
+  background: rgba(255, 255, 255, 0.1);
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
@@ -46,7 +46,7 @@ input::placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
 
-/* Buttons */
+
 button {
   padding: 10px;
   width: 100%;
@@ -62,14 +62,14 @@ button:hover {
   background: #45a049;
 }
 
-/* Notes list */
+
 ul {
   list-style: none;
   padding: 0;
 }
 
 li {
-  background: rgba(255, 255, 255, 0.1); /* semi-transparent */
+  background: rgba(255, 255, 255, 0.1); 
   color: white;
   padding: 10px;
   margin-top: 5px;
